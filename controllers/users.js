@@ -103,14 +103,16 @@ users.post('/addToCart', (req, res) => {
         name,
         description,
         deadline,
+        signedup,
+        status
         
         
     } = group;
     
     User.findByIdAndUpdate(userId, 
-        { $push: { cart: [{ _id, name, description, deadline,}]}}, { new: true }, (err, doc) => {
+        { $push: { cart: [{ _id, name, description, deadline,status, signedup}]}}, { new: true }, (err, doc) => {
         if (err) console.log(err)
-        console.log(doc)
+        console.log(status)
        
     })
     

@@ -19,6 +19,9 @@ const groupSchema = new Schema({
     },
     signedup: { 
         type: String,  
+    },
+    status: {
+        type: String, 
     }
 }, { timestamps: true })
 

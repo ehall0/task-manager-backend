@@ -33,7 +33,11 @@ db.on('error', (err) => console.log('🚨🚨🚨', err));
 // CORS
 ////////////////////
 
-const whitelist = ['http://localhost:3000']
+const whitelist = [
+    'http://localhost:3000',
+    'https://task-manager-2020.netlify.app',
+    
+]
 const corsOptions = {
     origin: function (origin, callback) {
         if (whitelist.indexOf(origin) !== -1) {
